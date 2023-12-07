@@ -3,40 +3,38 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 body{
-    min-height: 100%;
-    background-color: #EBEDEC;
+    margin: 0;
+        background-image: url('https://www.shutterstock.com/image-vector/modern-hightech-background-presentations-websites-600nw-2181983721.jpg');
+        background-size: cover; /* Ajusta la imagen al tamaño de la ventana del navegador */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
 }
 
-html{
+html {
     height: 100%;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .navbar {
+    grid-area: navbar;
+    font-family: cursive;
 }
 
-.grid-container > *{
-    padding: 0 10px 0 10px;
-    }
-    .header {
-        grid-area: header;
-        background-color: #4B6157;
-    }
-    .navbar {
-        grid-area: navbar;
-        background-color: #4B6157;
-        font-family: 'Caveat', 'Edu TAS Beginner', cursive;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
-    .main {
-        grid-area: main;
-        
-    }
-    .footer { 
-        grid-area: footer;
-    }
-
+  .main {
+    grid-area: main;
+    padding: 5%;
+  }
+  .footer {
+    grid-area: footer;
+    margin-left: 20px;
+  }
 
     .grid-container {
         display: grid;
@@ -48,213 +46,265 @@ html{
         "footer"
     }
 
+/* +++++++++++ NAVBAR +++++++++++ */
+    #navLinks{
+        color: #56cfe1 ;
+        font-size: 20px;
+    }
+    
+    .links {
+        transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+    
+    }
+    .links a:hover{
+        /* background-color: #C58657; */
+        /* border-radius: 18px; */
+        /* color: white; */
+        /* min-width: none; */
+        transform: translatey(-20px);
+            -webkit-transform: translatey(-10px);
+            -moz-transform: translatey(-10px);
+    }
+    .links li{
+        padding: 0 5px 0;
+    }
+    
+    #miLogo{
+        display: flex;
+        height: 75px;
+        /* align-items: center;
+        justify-content: center; */
+        /* margin-right: 350px; */
+        cursor: pointer;
+        transition: 0.3s;
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+    /* +++++++++++ NAVBAR +++++++++++ */
+    main {
+        max-width: 800px;
+        width: 90%;
+        margin: auto;
+        padding: 40px;
+    }
 
-/* Navbar */
-.links{
-    list-style: none;
+.tltCtc{
     text-align: center;
-}
-.links a{
-    text-decoration: none;
-    font-size: x-large;
-    color: black;
-}
-
-.links a:hover{
-    border-radius: 18%;
-    color: white;
-    background-color: #C58657;
-    transition: 0.3s;
-    padding: 17px;
-}
-
-.links li{
-    display: inline-block;
-    padding: 10px 10px;
-}
-
-.logo{
-    height: 5rem;
-    width: 5rem;
-    cursor: pointer;
-    transition: 0.3s;
-    margin: 10px 50px;
-}
-
-.logo:hover{
-    transform: scale(1.3);
-}
-
-.redes{
-    cursor: pointer;
-}
-
-#github{
-    height: 2.5rem;
-    width: 2.5rem;
-    transition: 0.3s;
-    margin: 0 5px;
-}
-#github:hover{
-    transform: scale(1.3);
-}
-
-#linkedin{
-    height: 2.5rem;
-    width: 2.5rem;
-    transition: 0.3s;
-    margin: 0 5px;
-}
-#linkedin:hover{
-    transform: scale(1.3);
-}
-
-#correo{
-    height: 2.5rem;
-    width: 2.5rem;
-    transition: 0.3s;
-    margin: 0 5px;
-}
-#correo:hover{
-    transform: scale(1.3);
-}
-
-#whatsapp{
-    height: 2.5rem;
-    width: 2.5rem;
-    transition: 0.3s;
-    margin: 0 5px;
-}
-#whatsapp:hover{
-    transform: scale(1.3);
-}
-/* Navbar */
-
-/* FORMULARIO */
-.container{
-    display: flex;
-    justify-content: center;
-}
-
-form{
-    display: flex;
-    padding: 50px 55px;
-    text-align: center;
-    width: 700px;
-    align-items: center;
-    justify-content: center;
+    font-size: 30px;
     font-family: cursive;
-    display: flex;
-}
-
-label{
-    color: black;
-    font-size: medium;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.input-group{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-input, textarea{
-    padding: 17px 25px;
-    border-radius: 20%;
-    margin-bottom: 20px;
-    background-color: white;
-    border: 2px solid #F0FAF1;
-    color: #283629;
-    /* outline: none; */
-}
-
-input::placeholder, textarea::placeholder{
-    color: rgb(87, 87, 87);
-}
-
-.form-txt{
-    margin-bottom: 30px;
-    display: flex;
-    /* justify-content: center; */
-    text-align: center;
-}
-
-
-.form-txt a{
-    color: #76B2BE;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.btn{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    font-family: cursive;
-    background-color: #C58657;
-    color: white;
-    margin: 0 200px 0 500px;
-    outline: none;
-}
-
-.btn:hover{
-    background-color: blue;
-    color: white;
-}
-
-@media(max-width:991px){
-
-    body{
-        padding: 30px;
-    }
-    form{
-        padding: 50px 30px;
-        width: 100%;
-    }
-
-    input{
-        padding: 15px;
-    }
+    color: #f7d1cd;
 }
 
 /* FORMULARIO */
 
+.container_contacto {
+	border: 6px solid #9381ff;
+    box-shadow:  0px 3px 35px 0px #9381ff;
+    background: none;
+    border-radius: 20px;
+    color: #f2b5d4;
+}
+
+.formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.formulario__grupo-input {
+	position: relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 30px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+    /* border: 2px solid black; */
+}
+
+/* .formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+} */
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#button {
+	font-size: 20px;
+    /* border: 2px solid black;
+    color: black;
+    border-radius: 20px; */
+    text-align: center;
+    min-width: 140px;
+    height: 40px;
+	/* background-color: #82C02D;
+	box-shadow: 5px 5px 0px 0px black; */
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+    color: #000;
+    border: none;
+    box-shadow: 2px -2px 30px 6px rgba(148,187,233,1);
+    border-radius: 25px;
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+/* .formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+} */
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
+}
+
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.formulario {
+		grid-template-columns: 1fr;
+	}
+
+	.formulario__grupo-terminos, 
+	.formulario__mensaje,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.formulario__btn {
+		width: 100%;
+	}
+}
 
 
 
 /*FOOTER contactame */
-.footer{
-    background-color: #E3CDBB;
-}
-
 .card-text-ctc{
     display: flex;
     text-align: center;
     font-family: cursive;
     font-size: xxx-large;
+    color: #b8e0d2;
 }
-
-.btn{
+#btnCtc{
     display: flex;
-    text-align: center;
     justify-content: center;
-    font-family: cursive;
-    background-color: #C58657;
-    color: white;
-    margin: 0 200px 0 200px;
-    outline: none;
+    align-items: center;
+    min-width: 50px;
+    background: radial-gradient(circle, #eeaeca 0%, #94bbe9 100%);
+    color: #000;
+    border: none;
+    box-shadow: 2px -2px 30px 6px rgba(148,187,233,1);
+    border-radius: 25px;
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
-.btn:hover{
-    background-color: blue;
+@keyframes slide {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(20px);}
+    100% {transform: translateX(0);}
 }
 
 .pie-pag p{
     display: flex;
     justify-content: center;
     text-align: center;
+    color: #fff;
 }
 
 .card-body-redes{
@@ -275,7 +325,7 @@ input::placeholder, textarea::placeholder{
 }
 
 #github3{
-    /* display: flex; */
+    display: flex;
     width: 4rem;
     height: 4rem;
     transition: 0.3s;
@@ -285,7 +335,7 @@ input::placeholder, textarea::placeholder{
     transform: scale(1.3);
 }
 #linkedin2{
-    /* display: flex; */
+    display: flex;
     width: 4rem;
     height: 4rem;
     transition: 0.3s;
@@ -296,7 +346,7 @@ input::placeholder, textarea::placeholder{
 }
 
 #correo2{
-    /* display: flex; */
+    display: flex;
     width: 4rem;
     height: 4rem;
     transition: 0.3s;
@@ -307,7 +357,7 @@ input::placeholder, textarea::placeholder{
 }
 
 #whatsapp2{
-    /* display: flex; */
+    display: flex;
     width: 4rem;
     height: 4rem;
     transition: 0.3s;

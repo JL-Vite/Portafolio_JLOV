@@ -6,102 +6,248 @@
     <title>CONTACTO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/particles.css">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("9VVYCZOUyMHhTOeeS");
+      })();
+    </script>
 
   </head>
   <body class="grid-container">
+    <div id="particles-js"></div><!-- Para la animación de fondo -->
 
+    <header class="contenedor header" ><!--navbar-->
+      <nav class="navbar navbar-expand-lg"> <!--bg-body-tertiary-->
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="links navbar-nav">
+              <li class="nav-item">
+                <a id="navLinks" class="nav-link active" aria-current="page" href="index.html"><strong>Inicio</strong></a>
+              </li>
+              <!-- <li class="nav-item">
+                <a id="navLinks" class="nav-link active" href="#"><strong>Mi experiencia</strong></a>
+              </li> -->
+              
+              <li class="nav-item dropdown">
+                <a id="navLinks" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>Mi trayectoria</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a id="navLinks" class="dropdown-item" href="index.html#Educacion"><strong>Mi educación</strong></a></li>
+                  <li><a id="navLinks" class="dropdown-item" href="index.html#idiomas"><strong>Idiomas</strong></a></li>
+                  <li><a id="navLinks" class="dropdown-item" href="index.html#expLaboral"><strong>Experiencia laboral</strong></a></li>
+                </ul>
 
-
-<!-- NAVBAR -->
-  <header class="header">
-    <nav class="navbar">
-      <ul class="links">
-        <li><a href="http://127.0.0.1:5500/index.html" target="_blank">Inicio</a></li>
-        <li><a href="#">Sobre mi</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contáctame</a></li>
-      </ul>
-      <div>
-          <a href="#"><img src="./src/logo.png" alt="milogo" class="logo"></a>
-      </div>
-      <div class="redes">
-          <a href="#"><img id="github" src="./src/github.png" alt=""></a>
-          <a href="#"><img id="linkedin" src="./src/linkedin.png" alt=""></a>
-          <a href="#"><img id="correo" src="./src/correo.png" alt=""></a>
-          <a href="#"><img id="whatsapp" src="./src/whatsapp.png" alt=""></a>
-      </div>
-    </nav>
-  </header>
-  <!-- NAVBAR -->    
-
-
-<!-- FORMULARIO -->
-<main class="container">
-  <form action="https://formsubmit.co/oliveravitej@gmail.com" method="POST" >
-    <div class="input-group">
-
-          <label for="name">Nombre</label>
-          <input type="text" name="name" id="name" placeholder="Juan Pérez">
-
-          <label for="phone">Teléfono</label>
-          <input type="tel" name="phone" id="phone" placeholder="(55) 5555 0000">
-
-          <label for="email">Correo electrónico</label>
-          <input type="email" name="email" id="email" placeholder="you@email.com">
-
-          <label for="message">Mensaje</label>
-          <textarea name="message" id="message" cols="10" rows="5" placeholder="Escribe tu mensaje"></textarea>
-
-          <input class="btn" type="submit" value="Enviar">
+              <li class="nav-item dropdown">
+                <a id="navLinks" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <strong>Skills</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a id="navLinks" class="dropdown-item" href="index.html#hardSkills"><strong>Hard Skills</strong></a></li>
+                  <li><a id="navLinks" class="dropdown-item" href="index.html#softSkills"><strong> Soft Skills</strong></a></li>
+              </ul>
+  
+              <li class="nav-item">
+                <a id="navLinks" class="nav-link active" aria-disabled="true" href="index.html#proyectos"><strong>Proyectos</strong></a>
+              </li>
+              <li class="nav-item">
+                <a id="navLinks" class="nav-link active" aria-disabled="true" href="#"><strong>Contáctame</strong></a>
+              </li>
+            </ul>
+  
+  
+          </div>
+            <a class="navbar-brand text-center" href="#">
+              <img id="miLogo" src="./src/logo.png" alt="Logo" class="d-inline-block align-text-top rounded mx-auto d-block">
+            </a>
+          <!-- <div class="redes">
+              <a class="navbar-brand" href="#">
+                <img id="github" src="./src/github.png" alt="Logo" class="d-inline-block align-text-top rounded float-end">
+              </a>
+              <a class="navbar-brand" href="#">
+                <img id="linkedin" src="./src/linkedin.png" alt="Logo" class="d-inline-block align-text-top rounded float-end">
+              </a>
+              <a class="navbar-brand" href="#">
+                <img id="correo" src="./src/correo.png" alt="Logo" class="d-inline-block align-text-top rounded float-end">
+              </a>
+              <a class="navbar-brand" href="#">
+                <img id="whatsapp" src="./src/whatsapp.png" alt="Logo" class="d-inline-block align-text-top rounded float-end">
+              </a>
+            </div> -->
+        </div>
+      </nav>
+    </header>
+    
+    
+  <!-- ++++++++++ HEADER / NAVBAR ++++++++++ -->   
+  
+  <div class="tltCtc">
+    <div class="card-body">
+     <strong>👽 TU DEVELOPER JUNIOR DE ENSUEÑO, AL ALCANCE DE UN CLICK 👽 </strong>
     </div>
-  </form>
-</main>
-<!-- FORMULARIO -->
+  </div>
 
-<!-- FOOTER -->
+<main>
+  <!--aquí inicia el formulario-->
+  <div class="p-4 container_contacto">
+		<form action="" class="formulario" id="formulario">
+
+			<!-- Grupo: Nombre -->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Jessica Olivera" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+			</div>
+
+      <!-- Grupo: Teléfono -->
+			<div class="formulario__grupo" id="grupo__telefono">
+				<label for="telefono" class="formulario__label">Teléfono</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="(55) 5555 5555" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar 10 dígitos</p>
+			</div>
+
+			<!-- Grupo: Correo Electronico -->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Correo Electrónico</label>
+				<div class="formulario__grupo-input">
+					<input type="email" class="formulario__input" name="correo" id="correo"
+						placeholder="you@email.com" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Caracteres permitidos: letras, números, puntos, guión y guión bajo</p>
+			</div>
+
+			
+
+			<!--Grupo: Mensaje-->
+			<div class="formulario__grupo" id="grupo__mensaje">
+				<label for="mensaje" class="formulario__label">Mensaje</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="mensaje" id="mensaje"
+						placeholder="Escribe tu mensaje" required>
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+			</div>
+
+			<!-- Botton-->
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar" id="boton">
+				<input type="submit" class="btn btn-success" id="button" value="Enviar">
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+			</div>
+
+			<div id="alerts">
+			</div>
+
+		</form>
+		</div>
+</main>
+
+<!-- ++++++++++++++++++ FORMULARIO ++++++++++++++++++ -->
+<!-- <main class="container">
+!-- action="https://formsubmit.co/oliveravitej@gmail.com" -->
+  <!-- <form action="" class="formulario" id="formulario" method="POST" >
+    <div class="input-group"> -->
+
+          <!-- Nombre -->
+          <!-- <div class="formulario__grupo" id="grupo__nombre">
+            <label for="name" class="formulario__label">Nombre</label>
+            <div class="formulario__grupo-input">
+              <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Jessica Olivera" required>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ingresa un nombre valido</p>
+          </div> -->
+          <!-- Tel -->
+          <!-- <div class="formulario__grupo" id="grupo__telefono">
+            <label for="phone" class="formulario__label">Teléfono</label>
+            <div class="formulario__grupo-input">
+              <input type="tel" class="formulario__input" name="telefono" id="telefono" placeholder="(55) 5555 0000" required>
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">Ingresa un nombre valido</p>
+          </div> -->
+          <!-- Correo -->
+          <!-- <div class="formulario__grupo" id="grupo__correo">
+            <label for="email" class="formulario__label">Correo electrónico</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="you@email.com" required>
+            </div>
+            <p class="formulario__input-error">Caracteres permitidos: letras, números, puntos, guión y guión bajo</p>
+          </div> -->
+          <!-- Mensaje -->
+          <!-- <div class="formulario__grupo" id="grupo__mensaje">
+            <label for="message" class="formulario__label">Mensaje</label>
+            <div class="formulario__grupo-input">
+              <textarea name="message" class="formulario__input" name="mensaje" id="mensaje" cols="10" rows="5" placeholder="Escribe tu mensaje"></textarea>
+            </div>
+          </div> -->
+          <!-- Boton enviar -->
+          <!-- <div class="formulario__grupo formulario__grupo-btn-enviar" id="boton">
+            <input type="submit" class="btn btn-success" id="button" value="Enviar">
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+          </div>
+
+          <div id="alerts">
+          </div> -->
+          <!-- <textarea name="message" id="message" cols="10" rows="5" placeholder="Escribe tu mensaje"></textarea> -->
+          <!-- <input id="btnCtc" type="submit" value="Enviar"> -->
+
+    <!-- </div>
+  </form> -->
+<!-- </main> -->
+<!-- ++++++++++++++++++ FORMULARIO ++++++++++++++++++ -->
+
+<!-- +++++++++++++++ FOOTER +++++++++++++++ -->
 <footer class="footer">
-  <div class="p-pagina">
+  <div class="">
     <div class="row">
       <div class="col-sm-6 mb-3 mb-sm-0">
         <div class="cards-contacto">
           <div class="card-body-ctcfooter">
             <p class="card-text-ctc">¿Necesitas una desarrolladora web en la Ciudad de México?</p>
-            <a href="#" class="btn btn-primary">CONTÁCTAME</a>
+            <a id="btnCtc" class="btn btn-primary" href="#" target="_blank" role="button">Contáctame</a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card-img-redes">
           <div class="card-body-redes">
-            <a href="#"><img id="github3" src="./src/github.png" alt=""></a>
-            <a href="#"><img id="linkedin2" src="./src/linkedin.png" alt=""></a>
+            <a href="https://github.com/JL-Vite" target="_blank"><img id="github3" src="./src/gitH.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/jessica-l-olivera-vite-00898928b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " target="_blank"><img id="linkedin2" src="./src/link.png" alt=""></a>
             </div><br>
             <div class="card-body-redes2">
-            <a href="#"><img id="correo2" src="./src/correo.png" alt=""></a>
-            <a href="#"><img id="whatsapp2" src="./src/whatsapp.png" alt=""></a><br><br>
+            <a href="#" ><img id="correo2" src="./src/email.png" alt=""></a>
+            <a href="https://wa.link/q4r39h" target="_blank"><img id="whatsapp2" src="./src/whats.png" alt=""></a><br><br>
           </div>
         </div>
       </div>
-  </div><br/>
+  </div><br/><br/>
     <div class="pie-pag">
       <p>~ Jessica L. Olivera Vite ~ <br> © Generation 2023</p>
     </div>
   </footer>
-<!-- FOOTER --> 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+<!-- +++++++++++++++ FOOTER +++++++++++++++ -->
+  
+<script src="./js/main.js" defer></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <!-- Animación fondo en movimiento-->
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/app.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
